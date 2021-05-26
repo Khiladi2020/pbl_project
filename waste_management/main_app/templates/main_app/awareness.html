@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="static/css/styles.css">
+
+  <title>Waste Management</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand" href="#"><b>AIT Waste Management</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'main_app:home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'main_app:daily-waste' %}">Daily Waste</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'main_app:stats' %}">Statistics</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'main_app:vote' %}">Voting</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'main_app:awareness' %}">Awareness</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'main_app:contact' %}">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+  <!-- BLOGS CARDS STARTS -->
+
+
+
+
+  <div class="container row overall">
+
+    <div class="card overinner" style="width: 20rem;">
+      <img style="width: 180px; height: 180px;" src="static/images/undraw_cooking_lyxy.svg" class="card-img-top"
+        alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Save Food</h5>
+        <p class="card-text">Food wastage is a universal problem, but India as a country can afford it a whole lot less .....</p>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal1">
+          Read
+        </button>
+      </div>
+    </div>
+
+    <div class="card overinner" style="width: 20rem;">
+      <img style="width: 180px; height: 180px;" src="static/images/undraw_eating_together_tjhx.svg" class="card-img-top"
+        alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Current Situatuion</h5>
+        <p class="card-text">Improving the food supply chain efficiency has been identified as an essential means.....</p>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal2">
+          Read
+        </button>
+      </div>
+    </div>
+
+    <div class="card overinner" style="width: 20rem;">
+      <img style="width: 180px; height: 180px;" src="static/images/undraw_breakfast_psiw.svg" class="card-img-top"
+        alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Food Wastage</h5>
+        <p class="card-text">Food waste typically refers to food that has completed the food supply chain up to a final
+          product......
+        </p>
+        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#myModal3">
+          Read
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- BLOGS CARDS END  -->
+
+
+
+
+  <!-- REQUEST ARTCILE DIV  -->
+
+  <div style="text-align: center;" class="container">
+    <form action="/" method="POST">
+      <button type="submit" style="margin: 60px;" class="btn btn-lg btn-outline-success">Request Article</button>
+    </form>
+  </div>
+
+  <!-- REQUEST ARTCILE DIV ENDS  -->
+
+
+
+
+
+  <!-- MODALS START  -->
+
+
+  <!-- Modal  1-->
+  <div class="modal fade " id="myModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h2 style=" margin :0px auto; margin-bottom: 2px; font-family: 'Delius', cursive; color:green">What should be
+            done to reduce the food wastage in India? </h2>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-lg-12 blog container">
+            <h6>Edited - 26 May 2021 by Banti Kumar</h6>
+            <img style=" max-height: 400px; padding:50px; padding-bottom: 0px;" src="static/images/modal_1.jpeg" alt="">
+            <p style="padding: 50px; ">
+
+              Food wastage is a universal problem, but India as a country can afford it a whole lot less than many
+              others. According to a report by the Food and Agricultural Organisation of the United Nations, every third
+              malnourished child is Indian. Yet, tons of food is wasted every day.
+
+              No doubt weddings and banquets are a huge source of , but restaurants and hotels also contribute to food
+              wastage, though the awareness around this has grown in the last five years. While some restaurants in
+              India employ food controllers to check food spoilage, others donate it to their staff and other personnel
+
+              Worldwide food waste, how can we supply poor people?
+
+              "Nar Seva Narayan Seva" means if you can help humankind, you are helping god.
+
+              According to the UN report, the 40% food is thrown away or waste in India yearly, which is worth of 92,000
+              cr INR, and at the other side, approx 19 cr people are unnourished.
+
+              Is it fair to waste food while others are hungry?
+              What should we do to reduce food waste? <br><br>
+              How to reduce wastage of food? <br>
+
+              If every humankind starts to feed each poor people in their surrounding, this could be the fortune of
+              India or world, but in real life, It's not possible because of the modern lifestyle we follow. This is
+              unreal to go and find the poor and hungry people for everyone & every day, even if you're reading it and
+              thinking to implement, it is tough to do by following daily life. Be honest to yourself and answer it.
+
+              But there is a solution for reducing food waste, as multiple NGOs are working like Badhte Kadam, who find
+              and feed the needy one by collecting excess food from any person and organization they also have keen to
+              provide fresh water, fruit-vegetable, shelter, medical services etc.
+              Lof of wasted in parties, marriages and Family functions.
+
+              According to the United Nations Development Programme, up to 40% of the food produced in India is wasted.
+              About 21 million tonnes of wheat are wasted in India and 50% of all food across the world meets the same
+              fate and never reaches the needy. <br><br>
+
+              "If you can't help one person, then help others to help a million people."
+            </p>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal  2-->
+  <div class="modal fade " id="myModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h1 style=" margin :0px auto; margin-bottom: 2px; font-family: 'Delius', cursive; color:green">Food waste management during the COVID-19 outbreak</h1>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-lg-12 blog container">
+            <h6>Edited - 26 May 2021 by Shubham Kumar</h6>
+            <img style=" max-width: 40%; padding:50px; padding-bottom: 0px;"
+              src="static/images/modal_2.jpeg"
+              alt="">
+            <p style="padding: 50px; ">
+              Improving the food supply chain efficiency has been identified as an essential means to enhance food
+              security, while reducing pressure on natural resources. Adequate food loss and waste (FLW) management has
+              been proposed as an approach to meet these objectives. The main hypothesis of this study is to consider
+              that the "strong fluctuations and short-term changes" on eating habits may have major consequences on
+              potential FLW generation and management, as well as on GHG emissions, all taking into account the
+              nutritional and the economic cost. Due to the exceptional lockdown measures imposed by the Spanish
+              government, as a consequence of the emerging coronavirus disease, COVID-19, food production and
+              consumption systems have undergone significant changes, which must be properly studied in order to propose
+              strategies from the lessons learned. Taking Spain as a case study, the methodological approach included a
+              deep analysis of the inputs and outputs of the Spanish food basket, the supply chain by means of a
+              Material Flow Analysis, as well as an economic and comprehensive nutritional assessment, all under a life
+              cycle thinking approach. The results reveal that during the first weeks of the COVID-19 lockdown, there
+              was no significant adjustment in overall FLW generation, but a partial reallocation from extra-domestic
+              consumption to households occurred (12% increase in household FLW). Moreover, the economic impact (+11%),
+              GHG emissions (+10%), and the nutritional content (-8%) complete the multivariable impact profile that the
+              COVID-19 outbreak had on FLW generation and management. Accordingly, this study once again highlights that
+              measures aimed at reducing FLW, particularly in the household sector, are critical to make better use of
+              food surpluses and FLW prevention and control, allowing us to confront future unforeseen scenarios.
+            </p>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Modal  3-->
+  <div class="modal fade " id="myModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h2 style=" margin :0px auto; margin-bottom: 2px; font-family: 'Delius', cursive; color:green">Does reducing
+            food waste also improve your bottom line? </h2>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-lg-12 blog container">
+            <h6>Edited - 26 May 2021 by Reetesh Tomar</h6>
+
+            <img style=" max-width: 40%; padding:50px; padding-bottom: 0px;" src="static/images/modal_3.png" alt="">
+            <p style="padding: 50px; ">
+
+              Food waste typically refers to food that has completed the food supply chain up to a final product, is of
+              good quality and within the ‘use by’ date, but that still doesn’t get consumed. This will usually take
+              place within the retail and consumption stages in the food supply chain. Reducing food waste and improving
+              the management of its disposal can positively impact your company revenues and meet Corporate Social
+              Responsibility (CSR) targets, particularly if you are in the public sector or a large corporation.
+              Strategic action on food waste presents businesses with an opportunity to tackle an increasingly pressing
+              waste management challenge, to leverage the substantial environmental benefits of using food resources
+              efficiently and respectfully, and to respond to the mounting global food security challenge. Corporate
+              Social Responsibility (CSR) allows businesses large and small to enact positive change. When companies
+              choose to include CSR as part of their business plan, it will not only benefit their bottom line, but will
+              also build trust with consumers. Consumers feel that when they use a product, service or work for a
+              socially responsible company, they are doing their part. The more socially responsible the company, the
+              more supportive the workforce and consumers become. Corporate Social Responsibility helps build trust,
+              raise awareness, and encourage social change. <br> <br> <br>
+
+
+              <span style="font-weight: bold;">How to reduce your company’s food waste </span>
+
+              <br> <br>
+
+              You will need to complete an analysis of your purchasing and consumption. Many large corporations and
+              public sector bodies find at the end of the analysis that they are purchasing or making more food than is
+              actually required, and therefore can immediately lower quantities, and in doing so lower their carbon
+              footprint, financial output and other environmental factors.
+              However, there will always be some form of food waste, and the most environmental way to process this is
+              by using portable compactors and balers. These are ideal for businesses that have large catering needs.
+              Portable compactors have enhanced hygiene levels and less vulnerability to spillage, vermin and insects.
+              They are 100% leak and odour proof, ensuring that they are suitable for collecting and disposing of food
+              waste to recycling centres, hence, preventing them from harming the climate, water, land and biodiversity.
+              Using portable compactors will save your business from trade effluent charges and high disposal costs.
+              Balers will ensure that your company is able to dispose of food and drink packaging by creating neat
+              separate bales of waste which are then easier to recycle, saving your business valuable money.
+
+              Combining the use of both a compactor and baler will help reduce the number of waste bins and space you
+              may require. A prominent advantage of this strategy is that there is a reduction in the number and cost of
+              collections that you might incur. And in the spirit of ‘Reduce, Reuse, Recycle’, using a compactor and
+              baler to neatly bale or crush your recycling also helps your waste management company to find partners
+              that can reuse the waste. The benefits do not end there; many businesses can also secure a rebate on
+              packaging waste when you use a compactor and a baler, so it really does make sense to incorporate them
+              into your waste management strategy.
+              For any more questions about what steps you can take to reduce food waste, get in touch!
+
+
+            </p>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- MODALS END  -->
+
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

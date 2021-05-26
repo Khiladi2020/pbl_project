@@ -1,0 +1,94 @@
+{% extends 'main_app/base.html' %}
+
+{% block imports %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+{% endblock imports %}
+
+{% block content %}
+    <div class="container">
+      <div id="chart_one" style="max-height:400px;">
+        <canvas id="myChart1" width="600" height="400"></canvas>
+      </div>
+      <div id="chart_two" style="max-height:400px;margin-top: 30px">
+        <canvas id="myChart2" width="600" height="400"></canvas>
+      </div>
+    </div>
+
+{% endblock content %}
+
+{% block graphs %}
+    <script>
+      var ctx = document.getElementById('myChart1').getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ['day1','day2','day3','day4','day5','day6','day7','day8','day9','day10'],
+              datasets: [{
+                  fill:false,
+                  label: 'Waste in Kg',
+                  data: [50,26,89,60,12,36,25,24,29,10],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: "rgb(75, 192, 192)",
+                  borderWidth: 3
+              }]
+          },
+          options: {
+            animation: {
+              duration: 1000,
+              easing: 'easeInBack'
+            },
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+          }
+      });
+
+      //chart 2
+      var ctx = document.getElementById('myChart2').getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ['day1','day2','day3','day4','day5','day6','day7','day8','day9','day10'],
+              datasets: [{
+                  label: 'Loss Of money',
+                  data: [6,14,10,11,6,9,8,4,8,5],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)'
+                  ],
+                  borderWidth: 1,
+                  lineTension:0.1
+              }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+          }
+      });
+    
+    </script>
+{% endblock graphs %}

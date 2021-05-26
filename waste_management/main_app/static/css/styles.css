@@ -111,3 +111,58 @@
 .ait_logo{
 	
 }
+.vote_checkboxes{
+	display: flex;
+	justify-content: space-around;
+}
+.user_account{
+
+}
+
+/* AWARENESS PAGE */
+
+.overall{
+    color: white;
+    margin: 50px auto;
+} 
+
+.overinner{
+    margin: 10px auto; 
+    padding: 10px;
+    color: black;
+    transition: 0.2s;
+
+}
+
+.overinner:hover{
+    transform: scale(1.1,1.1);
+}
+
+.modal .modal-dialog {
+	width: 100%;
+	max-width: none;
+	height: 100%;
+	margin: 0;
+}
+.modal .modal-content {
+	height: 100%;
+	border: 0;
+	border-radius: 0;
+}
+.modal .modal-body {
+	overflow-y: auto;
+}
+
+.blog{
+    width: 100%;;
+    border-radius: 5px;
+    margin: 0px auto;
+    text-align: left;
+    color:black;
+    background-color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* padding: 20px; */
+}

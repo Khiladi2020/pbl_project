@@ -1,0 +1,77 @@
+{% extends 'main_app/base.html' %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <div class="user_account px-2 pt-1">
+      <div class="dropdown">
+        <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{user.first_name }} {{user.last_name}}
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="{% url 'main_app:logout' %}">Logout</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="col-12 col-md-6 offset-md-3 col-sm-6 offset-md-3">
+        <div class="card cntct_crd">
+          <div class="card-header">
+            Vote
+          </div>
+          <div class="card-body">
+              <form>
+                {% csrf_token %}
+                <div class="form-group mb-0">
+                  <label class="mb">Meals that i will not attend</label>
+                </div>
+                <div class="form-group vote_checkboxes">
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">BreakFast</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">Lunch</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+                    <label class="form-check-label" for="inlineCheckbox3">Dinner</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="message" class="big_textt">Reason (optional)</label>
+                  <textarea class="form-control form_round" id="message" rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn btn-light form_round mb-2">Save</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% else %}
+      <p class="text-center bg-danger">Login to Vote</p>
+      <div class="container">
+      <div class="col-12 col-md-6 offset-md-3 col-sm-6 offset-md-3">
+        <div class="card cntct_crd">
+          <div class="card-header">
+            Login
+          </div>
+          <div class="card-body">
+             <form action="{% url 'main_app:login'%}" method="post">
+              {% csrf_token %}
+                <div class="form-group">
+                  <label for="name">Registration Number</label>
+                  <input type="text" class="form-control form_round" id="username" name="username">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control form_round" id="password" name="password">
+                </div>
+                <button type="submit" class="btn btn-light form_round mb-2">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+{% endblock content %}
